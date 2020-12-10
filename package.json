@@ -20,6 +20,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "jquery": "^3.5.1",
+    "@types/jquery": "^3.5.5",
     "jsdom": "^16.4.0",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
@@ -36,7 +37,6 @@
     "@types/express": "^4.17.9",
     "@types/express-session": "^1.17.3",
     "@types/jest": "^26.0.18",
-    "@types/jquery": "^3.5.4",
     "@types/jsdom": "^16.2.5",
     "@types/passport": "^1.0.4",
     "@types/passport-local": "^1.0.33",
@@ -55,7 +55,11 @@
       ".(ts|tsx)": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": ["ts", "tsx", "js"]
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
   },
   "engines": {
     "node": "10.16.3",
