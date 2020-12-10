@@ -1,0 +1,65 @@
+/* Ticket Main Containers */
+
+#all-tickets {
+    display: flex;
+    flex-direction: row;
+}
+
+#all-tickets > div {
+    height: 100%;
+    width: 100%;
+
+    padding: 5px;
+}
+
+#all-tickets .section-head {
+    color: aliceblue;
+    text-align: center;
+}
+
+/* Ticket Task */
+
+.ticket-task {
+    margin-bottom: 5px;
+}
+
+.ticket-task > .card-body {
+    display: flex;
+    flex-direction: row;
+}
+
+.tt-info {
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.tt-info > *{
+    margin: 0;
+}
+
+.tt-dropright {
+    height: 30px;
+    align-self: center;
+}
+
+.tt-more {
+    font-size: 30px;
+    padding: 0;
+}
+
+.tt-more:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+.tt-more:active {
+    color: lightgrey;
+}
+
+/* Modals */
+
+.modal form > * {
+    margin-bottom: 15px;
+}

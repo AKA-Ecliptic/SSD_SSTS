@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/login.css">
+    <title>SSTS</title>
+</head>
+<body>
+    <div class="container ctnr-main">
+        <h3>Safari Security Testing Services</h3>
+        <h6>Your Security Is Our Pursuit</h6>
+        <form class="ctnr-login" method="POST" action="/login">
+            <p>Please Enter Your Credentials:</p>
+            <div class="input-group flex-nowrap">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">@</span>
+                </div>
+                <input type="text" placeholder="Identifier" name="id">
+            </div>
+            <input type="password" placeholder="Password" name="password">
+            <input type="submit" class="btn btn-primary" value="Login">
+            <a>Forgotten Password</a>
+        </form>
+    </div>
+    <script src="/jquery/jquery.slim.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

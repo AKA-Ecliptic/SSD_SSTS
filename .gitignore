@@ -1,0 +1,8 @@
+/node_modules/
+
+/config/store/sessions/*
+
+/logs/attacks/*
+/logs/sequelize/*
+
+/database.db

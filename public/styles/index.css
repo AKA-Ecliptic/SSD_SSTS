@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Righteous&display=swap');
+
+/* Properties */
+
+:root {
+    --list-bg-color: rgb(15, 5, 35);
+    --main-bg-color: rgb(60, 55, 95);
+}
+
+#invisible {
+    pointer-events: none;
+    display: none;
+    visibility: hidden;
+}
+
+/* Top Level */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+
+    font-family: 'Lato', sans-serif;
+
+    background-image: url('../images/profile_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    user-select: none;
+}
+
+/* Containers */
+
+.ctnr-main {
+    height: 100%;
+    max-width: 1450px;
+
+    padding: .3em 1%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.ctnr-main > .container {
+    margin: 0 5px;
+}
+
+.ctnr-ticket-list {
+    width: 25%;
+
+    padding: 0;
+
+    background-color: var(--list-bg-color);
+}
+
+#ticket-list {
+    padding: 5px;
+}
+
+#ticket-list > .card {
+    margin-bottom: 5px;
+}
+
+.ctnr-ticket-view {
+    max-width: 75%;
+
+    background-color: var(--main-bg-color);
+}
+
+/* Display Header */
+
+.ctnr-display-header > hr {
+    border-color: black;
+}
+
+#header-back {
+    position: absolute;
+    top: .8em;
+    user-select: none;
+    color: black;
+}
+
+#header-back:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+#header-back:active {
+    color: lightgrey;
+    cursor: pointer;
+}
+
+/* Titles */
+
+.ticket-list-title {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 5px 0;
+
+    text-align: center;
+    color: aliceblue;
+    
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, .5);
+}
+
+#id-display {
+    margin: .35em 0;
+
+    color: aliceblue;
+}
+
+/* Ticket Cards */
+
+.card-body {
+    padding: 0;
+
+    display: flex;
+    flex: 1;
+    flex-flow: wrap;
+    flex-direction: column;
+}
+
+.card-body > * {
+    user-select: none;
+}
+
+.card-title, .card-subtitle {
+    width: 100%;
+
+    padding: 0 1%;
+    margin: 0;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.card-title > .ticket-title, .card-subtitle > .ticket-date {
+    width: 100%;
+
+    padding-left: 2%;
+    margin: 0;
+
+    text-align: start;
+}
+
+/* Priority */
+
+i.LOW {
+    color: green;
+}
+
+i.MEDIUM {
+    color: orange;
+}
+
+i.HIGH {
+    color: red;
+}
+
+/* Status */
+
+span[class^='status'] {
+    height: .5em;
+    width: 100%;
+}
+
+span[class*="OPEN"] {
+    background-color: aqua;
+}
+
+span[class*="RESOLVED"] {
+    background-color: limegreen;
+}
+
+span[class*="CLOSED"] {
+    background-color: grey;
+}
+
+/* Card Hover and Select Stuff */
+
+.card-subtitle:hover {
+    cursor: pointer;
+}
+
+.card-subtitle:hover > i{
+    color: grey;
+}
+
+.card-subtitle:active > i {
+    color: lightgrey;
+}
+
+#focus-ticket {
+    pointer-events: all;
+}
+
+/* Add Button */
+
+.btn-round {
+    height: 3em;
+    width: 3em;
+
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+
+    border-radius: 100px;
+    background-color: aliceblue;
+
+    user-select: none;
+}
+
+.btn-round:hover {
+    cursor: pointer;
+}
+
+.btn-round:hover > i {
+    color: darkgrey;
+}
+
+.btn-round:active > i {
+    color: lightgrey;
+}
+
+.btn-round > i {
+    color: black;
+    font-size: 3em;
+}

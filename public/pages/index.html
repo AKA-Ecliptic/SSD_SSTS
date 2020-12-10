@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/components.css">
+    <link rel="stylesheet" href="/styles/focused.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <title>SSTS</title>
+</head>
+<body>
+
+    <div class="container-fluid ctnr-main">
+        <div class="container ctnr-ticket-list">
+            <h5 class="ticket-list-title">Relevant Tickets</h5>
+            <div id="ticket-list"></div>
+        </div>
+        <div class="container ctnr-ticket-view">
+            <div class="ctnr-display-header">
+                <i class="material-icons invisible" id="header-back">arrow_back</i>
+                <h3 id="id-display"></h3>
+                <hr class="my-1">
+            </div>
+            <div id="focused-ticket"></div>
+            <div id="all-tickets">
+                <div class="ctnr-active-tickets"><h5 class="section-head">Active Tickets</h5></div>
+                <div class="ctnr-inactive-tickets"><h5 class="section-head">Inactive Tickets</h5></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-round" id="add-ticket" data-toggle="modal" data-target="#add-ticket-modal">
+        <i class="material-icons">add</i>
+    </div>
+
+    <div class="modal fade" id="add-ticket-modal" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">New Ticket</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form method="POST" action="/tickets/new" id="atm-form">
+                  <input type="text" class="form-control" placeholder="Title" name="title" id="atm-title-text" required>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="atm-priority-select">Priority</label>
+                    </div>
+                    <select class="custom-select" id="atm-priority-select" name="priority" required>
+                      <option value="LOW">Low</option>
+                      <option value="MEDIUM">Medium</option>
+                      <option value="HIGH">High</option>
+                    </select>
+                  </div>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="atm-user-select">@</label>
+                    </div>
+                    <select class="custom-select" id="atm-user-select" name="assigned" required>
+                    </select>
+                  </div>
+                  <textarea class="form-control" placeholder="Description" name="description" id="atm-desc-textarea" required></textarea>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="atm-submit">Submit Ticket</button>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="modal fade" id="edit-ticket-modal" tabindex="-1"></div>
+
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* Jumbotron Containers */
+
+.ft-content {
+    padding: 1%;
+    margin: 0 1%;
+}
+
+.ft-header, .ft-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.ft-header > *, .ft-info > * {
+    margin: 0;
+}
+
+/* Jumbotron Components */
+
+#ft-title {
+    margin-right: auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#ft-description {
+    text-align: justify;
+}
+
+#ft-date {
+    min-width: fit-content;
+}
+
+#ft-users {
+    margin-right: auto;
+    line-height: 30px;
+    text-align: center;
+}
+
+/* Comment Input */
+
+.ft-input-comment {
+    margin: 2% 0;
+}
+
+.ft-input-comment .btn {
+    background-color: rebeccapurple;
+}
+
+.ft-input-comment .btn:focus, .ft-input-comment input:focus {
+    box-shadow: none;
+}
+
+.ft-input-comment .btn:active {
+    color: black;
+}
+
+.ft-input-comment > textarea {
+    min-height: 40px;
+    height: 40px;
+    max-height: 200px;
+}
+
+/* Comments */
+
+.ft-comment {
+    margin: .2em 2%;
+}
+
+.ft-comment-details {
+    padding: 0 5px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.ft-comment-details > * {
+    margin: 0;
+}
+
+.ft-comment-date {
+    font-size: x-small;
+}
+
+.ft-commment-text {
+    padding: 5px;
+    margin: 0;
+
+    text-align: justify;
+}

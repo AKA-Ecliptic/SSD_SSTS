@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Righteous&display=swap');
+
+/* Top Level */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+
+    font-family: 'Lato', sans-serif;
+    
+    background-image: url('../images/index_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h3, h6 {
+    font-family: 'Righteous', cursive;
+    user-select: none;
+}
+
+/* Containers */
+
+.ctnr-main {
+    max-height: 45em;
+    max-width: 50em;
+
+    height: 75%;
+    width: 75%;
+    
+    padding: 2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 2px;
+    background-image: linear-gradient(250deg, #7788FF 50.6%, aliceblue 50.7%);
+}
+
+.ctnr-login {
+    width: 50%;
+
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    align-self: center;
+}
+
+.ctnr-login > * {
+    margin: 5px 0;
+}
+
+/* Form Fields */
+
+input[type='text'], input[type='password'], .input-group-text {
+    height: 2em;
+    width: 100%;
+
+    border: 1px solid lightgrey;
+}
+
+input[type='text'], input[type='password'] {
+    box-sizing: border-box;
+    padding: 0 2%;
+}
+
+input[type='submit'] {
+    height: 2em;
+    line-height: normal;
+}
+
+a, p {
+    width: fit-content;
+
+    align-self: center;
+
+    font-size: 15px;
+    text-align: center;
+
+    user-select: none;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: underline !important;
+}
