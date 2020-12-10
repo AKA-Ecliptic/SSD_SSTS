@@ -13,6 +13,14 @@ router.get('/login', failedLogin, (req, res) => {
     }
 });
 
+router.get('/logout', (req, res) => {
+    if(req.user){
+        req.session.destroy((err) => {  
+            res.status(200).end();
+        });
+    }
+});
+
 router.post('/login', (req, res, next) => {
     passport.authenticate('local', { 
         successRedirect: '/login_success',

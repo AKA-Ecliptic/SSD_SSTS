@@ -103,6 +103,24 @@ h1, h2, h3 {
     cursor: pointer;
 }
 
+#header-logout {
+    position: absolute;
+    top: 1.1em;
+    right: 40px;
+    user-select: none;
+    color: aliceblue;
+}
+
+#header-logout:hover {
+    color: darkgrey;
+    cursor: pointer;
+}
+
+#header-logout:active {
+    color: grey;
+    cursor: pointer;
+}
+
 /* Titles */
 
 .ticket-list-title {

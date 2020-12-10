@@ -118,6 +118,10 @@ $('#header-back').on('click', () => {
     });
 });
 
+$('#header-logout').on('click', () => {
+    $.get('/logout', (data) => { location.reload() });
+});
+
 $('#atm-submit').on('click', () => {
     let inputs: any[] = $('#atm-form').find('[id^="atm"]').toArray();
     let isValid: boolean = true;
